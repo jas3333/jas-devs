@@ -1,5 +1,4 @@
 import axios from 'axios';
-
 import { useState, useEffect } from 'react';
 
 const Apps = () => {
@@ -8,7 +7,7 @@ const Apps = () => {
     const getApps = async () => {
         try {
             const response = await axios.get('/api/v1/apps');
-            console.log(response);
+            console.log(response.data);
         } catch (error) {
             console.log(error.message);
         }

@@ -3,7 +3,6 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 import express from 'express';
-import userRouter from './routes/userRoutes.js';
 import appRouter from './routes/appRoutes.js';
 import errorHandler from './middleware/errorHandler.js';
 import connectDB from './config/db.js';
@@ -12,7 +11,6 @@ const app = express();
 app.use(express.json());
 connectDB();
 
-app.use('/api/v1/users', userRouter);
 app.use('/api/v1/apps', appRouter);
 app.use(errorHandler);
 
