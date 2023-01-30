@@ -18,9 +18,6 @@ const Navbar = () => {
                 <Link to='/Programming' className='nav-links mg-right-md'>
                     Programming
                 </Link>
-                <Link to='/Contact' className='nav-links mg-right-md'>
-                    Contact
-                </Link>
             </div>
         </nav>
     );
