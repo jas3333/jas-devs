@@ -1,14 +1,15 @@
-const sendApps = (req, res) => {
-    console.log("I'm here");
-    res.status(200).json({ message: 'Sending app' });
+import Blog from './../model/blogModel.js';
+
+const sendApps = (req, res) => {};
+
+const sendBlogs = async (req, res) => {
+    const blogs = await Blog.find({});
+    console.log(blogs);
+    res.status(200).json(blogs);
 };
 
-const sendLinux = (req, res) => {
-    res.status(200).json({ message: 'Sending Linux' });
-};
-
-const sendProgramming = (req, res) => {
+const sendSingleBlog = (req, res) => {
     res.status(200).json({ message: 'Sending Programming' });
 };
 
-export { sendApps, sendLinux, sendProgramming };
+export { sendApps, sendBlogs, sendSingleBlog };
